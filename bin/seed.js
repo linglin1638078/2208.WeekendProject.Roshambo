@@ -12,10 +12,10 @@ const seed = async () => {
   const bengame2 = await Game.create({ result: "human", playerId: ben.id })
   const bengame3 = await Game.create({ result: "computer", playerId: ben.id })
   const bengame4 = await Game.create({ result: "computer", playerId: ben.id })
-  const louisgame1 = await Game.create({ result: "tie", playerId: ben.id })
-  const louisgame2 = await Game.create({ result: "human", playerId: ben.id })
-  const louisgame3 = await Game.create({ result: "human", playerId: ben.id })
-  const louisgame4 = await Game.create({ result: "tie", playerId: ben.id })
+  const louisgame1 = await Game.create({ result: "tie", playerId: louis.id })
+  const louisgame2 = await Game.create({ result: "human", playerId: louis.id })
+  const louisgame3 = await Game.create({ result: "human", playerId: louis.id })
+  const louisgame4 = await Game.create({ result: "tie", playerId: louis.id })
 
   db.close()
   console.log(`

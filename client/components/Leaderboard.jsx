@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 
-import Player from './player';
+
 
 // On load, makes a get request to /api/players
 // Stores the result in state
@@ -15,7 +15,8 @@ const Leaderboard = () => {
 
     const getPlayersData = async () => {
         const response = await axios.get(`http://localhost:8080/api/players`);
-        setPlayers(response.data);
+        const allPlayers = await response.data;
+        setPlayers(allPlayers);
     }
 
     useEffect(() => {
